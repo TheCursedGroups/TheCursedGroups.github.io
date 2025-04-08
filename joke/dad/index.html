@@ -749,31 +749,7 @@
         }
     }
 
-    function fallbackCopy(text) {
-        const textArea = document.createElement("textarea");
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-            document.execCommand('copy');
-            showSuccessNotification("Joke copied to clipboard!");
-        } catch (err) {
-            showErrorNotification("Failed to copy joke.");
-        }
-        document.body.removeChild(textArea);
-    }
 
-    function updateShareLinks(joke) {
-        const encodedJoke = encodeURIComponent(`Here's a dad joke for you: "${joke}" - via TheCursedGroup`);
-        const currentUrl = encodeURIComponent(window.location.href);
-
-        const twitter = document.getElementById('twitterShare');
-        const facebook = document.getElementById('facebookShare');
-        const whatsapp = document.getElementById('whatsappShare');
-
-        if (twitter) twitter.href = `https://twitter.com/intent/tweet?text=${encodedJoke}`;
-        if (facebook) facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}&quote=${encodedJoke}`;
-    }
 
     // Initial fetch and event listeners
     document.addEventListener('DOMContentLoaded', () => {
