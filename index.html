@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TheCursedGroup</title>
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/121878378?s=48&v=4">
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/vapor/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6.4.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Simple Notify -->
+    <script src="https://thecursedgroup.github.io/joke/dad/noty.js"></script>
+    <link href="https://thecursedgroup.github.io/joke/dad/noty.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, #9d4edd, #5a189a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-section {
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #9d4edd, #5a189a, #3c096c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            border-radius: 30px;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .social-container {
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: linear-gradient(90deg, #9d4edd, #5a189a);
+            left: 25%;
+            bottom: -10px;
+            border-radius: 2px;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .icon-box {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://thecursedgroup.github.io/joke/">
+                <i class="fas fa-skull me-2"></i>TheCursedGroup
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://thecursedgroup.github.io/joke/">
+                            <i class="fas fa-laugh-squint me-1"></i>Joke
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/pun/">
+                            <i class="fas fa-grin-tongue-wink me-1"></i>Puns
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/dad/">
+                            <i class="fas fa-user-tie me-1"></i>Dad
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/chuck/">
+                            <i class="fas fa-fist-raised me-1"></i>Chuck
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/Joke/">
+                            <i class="fas fa-theater-masks me-1"></i>Jokes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title" data-aos="fade-up">Welcome to TheCursedGroup</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Join our community for jokes, entertainment, and more!</p>
+            
+            <div class="mt-5" data-aos="fade-up" data-aos-delay="400">
+                <a class="btn btn-primary btn-lg" href="#community">
+                    <i class="fas fa-users me-2"></i>Join Community
+                </a>
+                <a class="btn btn-outline-light btn-lg" href="#content">
+                    <i class="fas fa-laugh-beam me-2"></i>Explore Content
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content" class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Our Content</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Explore our hilarious collection of jokes and entertainment</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box">
+                                <i class="fas fa-laugh-squint text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Joke Central</h4>
+                            <p class="card-text">Discover our collection of hilarious jokes that will keep you laughing all day long.</p>
+                            <a href="https://thecursedgroup.github.io/joke/" class="btn btn-outline-primary mt-3">
+                                <i class="fas fa-arrow-right me-1"></i> Explore Jokes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box">
+                                <i class="fas fa-user-tie text-warning"></i>
+                            </div>
+                            <h4 class="card-title">Dad Jokes</h4>
+                            <p class="card-text">Eye-rolling dad jokes that are so bad they're actually good. Perfect for any occasion!</p>
+                            <a href="https://thecursedgroup.github.io/joke/dad/" class="btn btn-outline-warning mt-3">
+                                <i class="fas fa-arrow-right me-1"></i> See Dad Jokes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box">
+                                <i class="fas fa-fist-raised text-danger"></i>
+                            </div>
+                            <h4 class="card-title">Chuck Norris Facts</h4>
+                            <p class="card-text">The legendary collection of Chuck Norris facts that will blow your mind.</p>
+                            <a href="https://thecursedgroup.github.io/joke/chuck/" class="btn btn-outline-danger mt-3">
+                                <i class="fas fa-arrow-right me-1"></i> See Chuck Facts
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="content-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Join Our Community</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">Connect with us across different platforms</p>
+            </div>
+            
+            <div class="social-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <a class="btn btn-primary" href="http://baconspace.wordpress.com/">
+                        <i class="fab fa-wordpress me-2"></i>Blog
+                    </a>
+                    <a class="btn btn-danger" href="https://www.youtube.com/@Bacon_Space?sub_confirmation=1">
+                        <i class="fab fa-youtube me-2"></i>Youtube
+                    </a>
+                    <a class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="@Bacon_Space" href="https://twitter.com/Bacon_Space">
+                        <i class="fab fa-x-twitter me-2"></i>Twitter
+                    </a>
+                    <a class="btn btn-primary" href="https://fb.gg/TheCursedGroup">
+                        <i class="fab fa-facebook me-2"></i>Facebook
+                    </a>
+                    <a class="btn btn-warning" href="https://reddit.com/r/Bacon_Space">
+                        <i class="fab fa-reddit-alien me-2"></i>Reddit
+                    </a>
+                    <a class="btn btn-primary" href="https://discord.gg/vxa4gjP9hF">
+                        <i class="fab fa-discord me-2"></i>Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5><i class="fas fa-skull me-2"></i>TheCursedGroup</h5>
+                    <p>Bringing laughter and entertainment to the world.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p>&copy; 2025 TheCursedGroup. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Initialize AOS and other scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+        
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Show welcome notification
+        document.addEventListener('DOMContentLoaded', function() {
+            new Notify({
+                status: 'success',
+                title: "TheCursedGroup",
+                text: "Welcome To Our Redesigned Site!",
+                autoclose: true,
+                showCloseButton: false,
+                showIcon: true,
+                autotimeout: 3000
+            }).show();
+        });
+    </script>
+</body>
+</html>

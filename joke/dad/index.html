@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TheCursedGroup - Dad Joke</title>
+    <meta name="description" content="Enjoy a random Dad from TheCursedGroup.">
+    <meta name="author" content="TheCursedGroup">
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/62s95F1.png">
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Include Moment.js for timestamp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- Include Simple Notify JavaScript and CSS -->
+    <script src="https://thecursedgroup.github.io/joke/dad/noty.js"></script>
+    <link href="https://thecursedgroup.github.io/joke/dad/noty.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="https://thecursedgroup.github.io/joke/">TheCursedGroup</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/pun/">Puns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://thecursedgroup.github.io/joke/dad/">Dad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/chuck/">Chuck</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://thecursedgroup.github.io/joke/Joke/">Joke</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <div id="joke-container"></div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-primary" id="copyButton">
+                    <i class="fas fa-clipboard"></i> Copy Joke
+                </button>
+                <button type="button" class="btn btn-primary" id="reloadButton">
+                    <i class="fas fa-sync-alt"></i> Get New Joke
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+	    		        var toastConfig = {
+            title: "TheCursedGroup",
+            iconUrl: "https://i.imgur.com/62s95F1.png",
+            successMessage: "Joke Generator: Pun loaded successfully!",
+            errorMessage: "Joke Generator: Error loading Pun. Please try again."
+        };
+        function showSuccessNotification(message) {
+            new Notify({
+                status: 'success',
+                title: 'TheCursedGroup - Dad Joke',
+                text: message,
+                autoclose: true,
+		showIcon: false,
+		showCloseButton: false,
+                autotimeout: 3000
+            }).show();
+        }
+
+
+        function fetchJoke() {
+            fetch("https://icanhazdadjoke.com/", {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the joke content
+                document.getElementById('joke-container').textContent = data.joke;
+
+                // Show the success notification
+                showSuccessNotification("Joke loaded successfully");
+
+                // Enable the copy button
+                document.getElementById('copyButton').disabled = false;
+            })
+            .catch(error => {
+                // Show the error notification
+                
+        function showErrorNotification(message) {
+  new Noty({
+        text: errorMessage,
+        type: 'error',
+        theme: 'gta',
+        timeout: 3000, // Auto-close after 3 seconds
+    }).show();
+}
+
+                // Enable the reload button
+                document.getElementById('reloadButton').disabled = false;
+            });
+        }
+
+        function copyJokeToClipboard() {
+            var jokeText = document.getElementById('joke-container').textContent;
+            var textArea = document.createElement("textarea");
+            textArea.value = jokeText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+        }
+
+        // Initial fetch when the page loads
+        fetchJoke();
+
+        // Event listener for copy button
+        document.getElementById('copyButton').addEventListener('click', copyJokeToClipboard);
+
+        // Event listener for reload button
+        document.getElementById('reloadButton').addEventListener('click', fetchJoke);
+    </script>
+</body>
+</html>
